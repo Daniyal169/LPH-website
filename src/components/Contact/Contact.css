@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: start;
     margin-top: 4rem;
+    width: 100%;
 }
 
 .contact h1 {
@@ -17,123 +18,18 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    border: 2px solid red;
 }
 
 .contLeft {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 
-.contRight {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-}
-
-.contRightUp {
-    height: 30%;
-}
-
-.contRightDown {
-    height: 70%;
-    width: 100%;
-}
-
-.contRightDown img {
-    height: 100%;
-    width: 100%;
-}
 
 
-.contactMail {
-    display: flex;
-    margin-top: 10px;
-}
-
-.contactMail img {
-    margin-right: 5px;
-}
-
-.onsubmit {
-    color: green;
-    margin-top: 20px;
-}
-
-
-@media (max-width: 800px) {
-    .contactConatiner {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .contLeft {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contRight {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 5rem;
-    }
-
-    .contRightUp {
-        height: 100%;
-        width: 40%;
-        font-size: 16px;
-    }
-
-    .contRightDown {
-        height: 100%;
-        width: 30%;
-    }
-
-    .contRightDown img {
-        height: 200px;
-        width: 100%;
-    }
-
-    .contactMail {
-        display: flex;
-    }
-}
-
-@media (max-width: 800px) {
-    .contRightUp {
-        height: 100%;
-        width: 50%;
-    }
-
-    .contRightDown {
-        height: 100%;
-        width: 40%;
-    }
-}
-
-@media (max-width: 500px) {
-    .contRightUp {
-        height: 50%;
-        width: 100%;
-    }
-
-    .contRightDown {
-        display: none;
-    }
-
-    .contRight {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 2rem;
-    }
-}
 
 
 /* ------COntact Section----- */

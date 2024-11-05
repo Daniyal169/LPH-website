@@ -1,45 +1,82 @@
 import React from 'react'
 import "./AboutSection.css"
 import logo from "../../asserts/img/logo.png"
+import { Link } from 'react-router-dom'
 
 function AboutSection() {
     return (
-        <div className="aboutHero">
-            <div className="aboutCont">
-                <div className="aboutLeft">
-                    <div className="aboutText">
-                        <h3>Welcome to Launch Point Holdings (LPH), a hub of innovative and comprehensive solutions designed to empower businesses across the globe. At LPH, we believe in creating a seamless bridge between visionary ideas and practical solutions that drive success</h3>
-                        <h3> Founded on principles of trust, innovation, and customer satisfaction, we strive to lead the industry with unparalleled services in IT hardware, software solutions, and digital transformation consulting.</h3>
-                    </div>
-                    <div className="aboutImg">
-                        <div className="mainImg">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+        <section class="py-6 relative xl:mr-0 lg:mr-5 mr-0">
+            <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+                <div class="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
+                    <div class="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
+                        <div class="w-full flex-col justify-center items-start gap-8 flex">
+                            <div class="flex-col justify-start lg:items-start items-center gap-4 flex">
+                                <h6 class="text-gray-400 text-base font-normal leading-relaxed">About Us</h6>
+                                <div class="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
+                                    <h2
+                                        class="text-white text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
+                                        The Tale of Our Achievement Story</h2>
+                                    <p
+                                        class="text-gray-100 text-base font-normal leading-relaxed lg:text-start text-center">
+                                        Our achievement story is a testament to teamwork and perseverance. Together, we've
+                                        overcome challenges, celebrated victories, and created a narrative of progress and
+                                        success.</p>
+                                </div>
+                            </div>
+                            <div class="w-full flex-col justify-center items-start gap-6 flex">
+                                <div class="w-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
+                                    <div
+                                        class="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                                        <h4 class="text-gray-200 text-2xl font-bold font-manrope leading-9">33+ Years</h4>
+                                        <p class="text-gray-300 text-base font-normal leading-relaxed">Influencing Digital
+                                            Landscapes Together</p>
+                                    </div>
+                                    <div
+                                        class="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                                        <h4 class="text-gray-200 text-2xl font-bold font-manrope leading-9">125+ Projects
+                                        </h4>
+                                        <p class="text-gray-500 text-base font-normal leading-relaxed">Excellence Achieved
+                                            Through Success</p>
+                                    </div>
+                                </div>
+                                <div class="w-full h-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
+                                    <div
+                                        class="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                                        <h4 class="text-gray-200 text-2xl font-bold font-manrope leading-9">26+ Awards</h4>
+                                        <p class="text-gray-300 text-base font-normal leading-relaxed">Our Dedication to
+                                            Innovation Wins Understanding</p>
+                                    </div>
+                                    <div
+                                        class="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                                        <h4 class="text-gray-200 text-2xl font-bold font-manrope leading-9">99% Happy
+                                            Clients</h4>
+                                        <p class="text-gray-300 text-base font-normal leading-relaxed">Mirrors our Focus on
+                                            Client Satisfaction.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="imgContent">
-                            <img src={logo} alt="" />
-                            <h3>+92 3254881328</h3>
-                            <h3>lph@gmail.com</h3>
+                        <div className="mt-10 flex items-center justify-center gap-x-6">
+                            <Link
+                                to="mailto:daniyalsohail47@gmail.com"
+                                className="btn"
+                            >
+                                Contact Us<span aria-hidden="true" className='ml-2'> →</span>
+                            </Link>
+
                         </div>
                     </div>
-                </div>
-                <div className="aboutRight">
-                    <div className="aboutRightUp">
-                        <img src="https://plus.unsplash.com/premium_photo-1683120966127-14162cdd0935?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                        <h3>2.5+</h3>
-                        <p>Years of Experience</p>
-                        <h3>4.7%</h3>
-                        <p>Average Client Rating</p>
-                    </div>
-                    <div className="aboutRightDown">
-                        <a
-                            className="btn"
-                        >
-                            Collaborate <span aria-hidden="true" className='ml-2'> ↓ </span>
-                        </a>
+                    <div class="w-full lg:justify-start justify-center items-start flex">
+                        <div
+                            class="sm:w-[564px] w-full sm:h-[646px] h-full sm:bg-gray-100 rounded-3xl sm:border border-gray-200 relative">
+                            <img class="sm:mt-5 sm:ml-5 w-full h-full rounded-3xl object-cover"
+                                src="https://pagedone.io/asset/uploads/1717742431.png" alt="about Us image" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
     )
 }
 

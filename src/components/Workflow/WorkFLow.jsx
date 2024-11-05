@@ -25,7 +25,9 @@ function WorkFlow() {
 
     return (
         <div className="workflow">
-            <h1>Our Services Approach</h1>
+            <h1 className="block text-center w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl mb-10">
+                Our Services Approach
+            </h1>
             {work.map((item) => (
                 <FlowCard title={item.title} content={item.content} />
             ))}

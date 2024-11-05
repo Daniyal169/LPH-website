@@ -1,18 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import "./Contact.css"
+import "./Contact.css";
 
 function Contact() {
-
-
     return (
-        <div className="contact">
-            <h1>Contact Me</h1>
-            <div className="contactConatiner">
-                <div className="contLeft">
-                    <form className="max-w-xl">
-                        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                            <div>
+        <div className="contact w-full">
+            <h1 className="text-center text-3xl font-bold">Contact Me</h1>
+            <div className="contactContainer w-full">
+                <div className="contLeft w-full">
+                    <form className="max-w-xl w-full mx-auto">
+                        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 w-full">
+                            <div className="w-full">
                                 <div className="mt-2.5">
                                     <input
                                         id="first-name"
@@ -25,7 +22,7 @@ function Contact() {
                                     />
                                 </div>
                             </div>
-                            <div>
+                            <div className="w-full">
                                 <div className="mt-2.5">
                                     <input
                                         id="last-name"
@@ -37,7 +34,7 @@ function Contact() {
                                     />
                                 </div>
                             </div>
-                            <div className="sm:col-span-2">
+                            <div className="sm:col-span-2 w-full">
                                 <div className="mt-2.5">
                                     <input
                                         id="email"
@@ -50,7 +47,7 @@ function Contact() {
                                     />
                                 </div>
                             </div>
-                            <div className="sm:col-span-2">
+                            <div className="sm:col-span-2 w-full">
                                 <div className="mt-2.5">
                                     <input
                                         id="phone-number"
@@ -63,7 +60,7 @@ function Contact() {
                                     />
                                 </div>
                             </div>
-                            <div className="sm:col-span-2">
+                            <div className="sm:col-span-2 w-full">
                                 <div className="mt-2.5">
                                     <textarea
                                         id="message"
@@ -77,25 +74,15 @@ function Contact() {
                             </div>
                         </div>
                         <div className="mt-10">
-                            <button type="submit" className="btn" >
+                            <button type="submit" className="btn">
                                 Submit Now
                             </button>
                         </div>
                     </form>
                 </div>
-                <div className="contRight">
-                    <div className="contRightUp">
-                        <p>Please fill out the form below, & we will get back to you as soon as possible.</p>
-                        <div className="contactMail">
-                            <img src="https://cdn.prod.website-files.com/660fed9ccca978270ae11ace/66823bee5eff85ce38413f2a_ic-email.svg" alt="" />
-                            <Link to={"mailto:daniyalsohail47@gmail.com"}>lph@gmail.com</Link>
-                        </div>
-                    </div>
-                    <div className="contRightDown">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZluNL4ku9NGNLGuowo-StCAE3toxb5zwmlA&s" alt="" />
-                    </div>
-                </div>
             </div>
+
+
         </div>
     );
 }
