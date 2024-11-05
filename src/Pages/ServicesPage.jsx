@@ -1,8 +1,19 @@
 import React from 'react'
+import ServicesHero from '../components/Services/ServicesHero'
+import AllServices from '../components/Services/AllServices'
+import WorkFlow from '../components/Workflow/WorkFLow'
+import ChooseUs from '../components/ChooseUs/ChooseUs'
 
 function ServicesPage() {
     return (
-        <div>ServicesPage</div>
+        <>
+            <ServicesHero />
+            <div className="app">
+                <AllServices />
+                <WorkFlow />
+                <ChooseUs />
+            </div>
+        </>
     )
 }
 

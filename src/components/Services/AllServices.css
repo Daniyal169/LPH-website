@@ -1,0 +1,32 @@
+.allServices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.allServices h1 {
+    color: var(--darkBlack);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.allServices p {
+    color: var(--darkBlack);
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.servicesBoxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 4rem;
+}

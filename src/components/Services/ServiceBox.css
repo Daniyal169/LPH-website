@@ -1,0 +1,35 @@
+.serviceBox {
+    height: 280px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.26);
+    background-color: white;
+    color: var(--bgColor);
+    box-shadow: 1px 4px 6px rgba(207, 250, 223, 0.4);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 10px 15px;
+}
+
+.serviceBox:hover {
+    box-shadow: 1px 2px 4px rgba(207, 250, 223, 0.4);
+
+}
+
+.serviceBox img {
+    height: 100px;
+    width: 100px;
+}
+
+.serviceBox h2 {
+    color: black;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
