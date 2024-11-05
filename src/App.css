@@ -1,0 +1,24 @@
+:root {
+  --bgColor: #192518;
+  --lightGreen: #08b35f;
+  --lightBlack: #333;
+}
+
+
+.app {
+  overflow: hidden;
+  padding: 0px 2rem;
+}
+
+.btn {
+  color: var(--bgColor);
+  background-color: white;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 22px;
+  font-size: 14px;
+  line-height: 130%;
+  text-decoration: none;
+  display: flex;
+}

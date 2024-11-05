@@ -1,0 +1,66 @@
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: black;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+
+.testHead {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.testimonialBoxes {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.testBox {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 46px;
+    border-radius: 10px;
+}
+
+.quote {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+.testCont {
+    display: flex;
+    margin-top: 20px;
+}
+
+.testCont>img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.testName h3 {
+    color: var(--darkBlack);
+    font-size: 18px;
+}
+
+.testName h4 {
+    font-size: 14px;
+}
+
+@media (max-width: 500px) {
+    .testimonial {
+        margin-top: 4rem;
+    }
+
+}

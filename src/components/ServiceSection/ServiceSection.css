@@ -1,0 +1,219 @@
+.serviceSection {
+    /* padding: 0 3rem; */
+    display: flex;
+    height: 100vh;
+    /* margin-bottom: 14rem; */
+    width: 100%;
+}
+
+.ser-left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+}
+
+.ser-left> :nth-child(1) {
+    color: white;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.ser-left> :nth-child(2) {
+    font-weight: 100;
+    font-size: 14px;
+    color: var(--black);
+    margin-top: 10px;
+    width: 50%;
+}
+
+.ser-right {
+    position: relative;
+    width: 50%;
+}
+
+.ser-right>* {
+    position: absolute;
+}
+
+.ser-right>:nth-child(1) {
+    left: 20rem;
+}
+
+.ser-right>:nth-child(2) {
+    top: 5rem;
+    left: 2rem;
+}
+
+.ser-right>:nth-child(3) {
+    top: 18rem;
+    left: 18rem;
+}
+
+
+
+@media screen and (max-width: 1150px) {
+    .serviceSection {
+        padding: 0 2rem;
+        margin-bottom: 8rem;
+
+    }
+}
+
+@media screen and (max-width: 1136px) {
+    .ser-right>:nth-child(1) {
+        left: 10rem;
+    }
+
+    .ser-right>:nth-child(2) {
+        top: 5rem;
+        left: -5rem;
+    }
+
+    .ser-right>:nth-child(3) {
+        top: 16rem;
+        left: 12rem;
+    }
+
+
+}
+
+@media screen and (max-width: 1090px) {
+    .serviceSection {
+        padding: 0 2rem;
+        margin-bottom: 5rem;
+
+    }
+
+    .ser-right>:nth-child(1) {
+        left: 6rem;
+    }
+
+    .ser-right>:nth-child(2) {
+        top: 5rem;
+        left: -8rem;
+    }
+
+    .ser-right>:nth-child(3) {
+        top: 16rem;
+        left: 9rem;
+    }
+
+
+}
+
+@media screen and (max-width: 1020px) {
+
+    .ser-right>:nth-child(1) {
+        left: 4rem;
+    }
+
+    .ser-right>:nth-child(2) {
+        top: 5rem;
+        left: -9rem;
+    }
+
+    .ser-right>:nth-child(3) {
+        top: 13rem;
+        left: 5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 890px) {
+    .serviceSection {
+        margin-top: 2rem;
+        flex-direction: column;
+        gap: 5rem;
+        padding: 0rem;
+        margin-bottom: 15rem;
+    }
+
+    .ser-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Two columns layout */
+        grid-row-gap: 12rem;
+        grid-column-gap: 2rem;
+        position: static;
+        /* Resetting position to static */
+        width: 100%;
+    }
+
+    .ser-right>* {
+        position: static;
+        /* Resetting position to static */
+        width: 100%;
+        /* Make sure each box takes full width of the grid cell */
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .serviceSection {
+        margin-top: 2rem;
+        flex-direction: column;
+        gap: 5rem;
+        padding: 0;
+        margin-bottom: 15rem;
+    }
+
+    .ser-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 12rem;
+        grid-column-gap: 3rem;
+        position: static;
+        /* Resetting position to static */
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 520px) {
+    .serviceSection {
+        margin-top: 3rem;
+        flex-direction: column;
+        gap: 3rem;
+        height: 55rem;
+        margin-bottom: 10rem;
+    }
+
+    .ser-right {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12rem;
+        position: static;
+        width: 100%;
+    }
+
+    .ser-right>* {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .serviceSection {
+        margin-top: 3rem;
+        margin-bottom: 12rem;
+    }
+}
+
+@media screen and (max-width: 396px) {
+    .serviceSection {
+        margin-top: 3rem;
+        margin-bottom: 13rem;
+    }
+}
+
+@media screen and (max-width: 356px) {
+    .serviceSection {
+        margin-top: 3rem;
+        margin-bottom: 14rem;
+    }
+}

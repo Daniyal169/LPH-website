@@ -1,0 +1,79 @@
+.ServiceCard {
+    height: 250px;
+    width: 230px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.26);
+    background-color: white;
+    color: var(--bgColor);
+    box-shadow: 1px 4px 6px rgba(207, 250, 223, 0.4);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 10px 15px;
+}
+
+.ServiceCard:hover {
+    box-shadow: 1px 2px 4px rgba(207, 250, 223, 0.4);
+
+}
+
+.ServiceCard span:nth-child(3) {
+    color: var(--gray);
+    font-size: 16px;
+}
+
+.ServiceCard>img {
+    height: 100px;
+    width: 100px;
+}
+
+.c-button {
+    background: #FFFFFF;
+    box-shadow: 0px 19px 60px rgba(0, 0, 0, 0.08);
+    border-radius: 7px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #5290FD;
+}
+
+.c-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1020px) {
+    .ServiceCard {
+        height: 250px;
+        width: 230px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        align-items: center;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.26);
+        background-color: white;
+        color: var(--bgColor);
+        box-shadow: 1px 4px 6px rgba(207, 250, 223, 0.4);
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.5s;
+        padding: 10px 15px;
+    }
+
+    .ServiceCard span:nth-child(3) {
+        color: var(--gray);
+        font-size: 12px;
+    }
+
+    .ServiceCard>img {
+        height: 70px;
+        width: 70px;
+    }
+}

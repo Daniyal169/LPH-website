@@ -1,0 +1,38 @@
+.mission {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.missionRight {
+    width: 40%;
+}
+
+.missionRight h2 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+
+.missionLeft {
+    width: 40%;
+}
+
+.missionLeft h2 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 200px;
+    background-color: white;
+    margin: 0 auto;
+}
