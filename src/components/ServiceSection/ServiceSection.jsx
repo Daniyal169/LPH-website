@@ -12,8 +12,7 @@ function ServiceSection() {
             <div className="ser-left">
 
                 <span  >Services</span>
-                <span > Discover our wide array of expertly crafted solutions designed to enhance
-                    <br /> Your digital experience and help your business thrive online</span>
+                <span > Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa similique, illum repellat facere architecto quia. Odio ipsam doloribus adipisci quasi voluptatum rerum temporibus velit at rem enim dignissimos repellat doloremque tempora consequuntur quisquam, molestiae dolorem iusto saepe. Nostrum nisi, sed asperiores cupiditate, inventore tempore, aut molestiae quisquam porro fugit quae.</span>
                 <a href={"https://www.fiverr.com/s/wkzbQ2D"} target='__blank' data-aos="slide-up">
                     <button className=" btn mt-8">Lets Work</button>
                 </a>

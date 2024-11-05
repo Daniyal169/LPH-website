@@ -4,6 +4,7 @@
     height: 100vh;
     /* margin-bottom: 14rem; */
     width: 100%;
+    margin-top: 4rem;
 }
 
 .ser-left {
@@ -20,8 +21,8 @@
 }
 
 .ser-left> :nth-child(2) {
-    font-weight: 100;
-    font-size: 14px;
+    font-weight: 200;
+    font-size: 15px;
     color: var(--black);
     margin-top: 10px;
     width: 50%;
