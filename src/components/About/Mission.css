@@ -36,3 +36,24 @@
     background-color: white;
     margin: 0 auto;
 }
+
+@media (max-width: 700px) {
+    .mission {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .missionRight {
+        width: 100%;
+    }
+
+    .missionLeft {
+        width: 100%;
+    }
+}

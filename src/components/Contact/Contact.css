@@ -175,7 +175,7 @@
     }
 
     .projectsBox h3 {
-        color: #000;
+        color: white;
         margin-bottom: 10px;
         font-size: 38px;
         line-height: 100%;
@@ -205,7 +205,7 @@
 
 @media (max-width: 400px) {
     .contact h1 {
-        color: var(--darkBlack);
+        color: white;
         margin-top: 0;
         margin-bottom: 30px;
         font-size: 40px;
@@ -215,7 +215,7 @@
 
 @media (max-width: 290px) {
     .contact h1 {
-        color: var(--darkBlack);
+        color: white;
         margin-top: 0;
         margin-bottom: 30px;
         font-size: 35px;

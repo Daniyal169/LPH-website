@@ -60,23 +60,7 @@
     }
 }
 
-@media screen and (max-width: 1136px) {
-    .ser-right>:nth-child(1) {
-        left: 10rem;
-    }
 
-    .ser-right>:nth-child(2) {
-        top: 5rem;
-        left: -5rem;
-    }
-
-    .ser-right>:nth-child(3) {
-        top: 16rem;
-        left: 12rem;
-    }
-
-
-}
 
 @media screen and (max-width: 1090px) {
     .serviceSection {
@@ -86,7 +70,7 @@
     }
 
     .ser-right>:nth-child(1) {
-        left: 6rem;
+        left: 14rem;
     }
 
     .ser-right>:nth-child(2) {
@@ -95,7 +79,7 @@
     }
 
     .ser-right>:nth-child(3) {
-        top: 16rem;
+        top: 18rem;
         left: 9rem;
     }
 
@@ -105,39 +89,42 @@
 @media screen and (max-width: 1020px) {
 
     .ser-right>:nth-child(1) {
-        left: 4rem;
+        left: 14rem;
     }
 
     .ser-right>:nth-child(2) {
         top: 5rem;
-        left: -9rem;
+        left: -8rem;
     }
 
     .ser-right>:nth-child(3) {
-        top: 13rem;
-        left: 5rem;
+        top: 18rem;
+        left: 9rem;
     }
 
 
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 930px) {
     .serviceSection {
-        margin-top: 2rem;
+        margin-top: 0rem;
         flex-direction: column;
         gap: 5rem;
         padding: 0rem;
         margin-bottom: 15rem;
     }
 
+    .ser-left {
+        width: 100%;
+    }
+
+
     .ser-right {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        /* Two columns layout */
+        grid-template-columns: 1fr 1fr 1fr;
         grid-row-gap: 12rem;
         grid-column-gap: 2rem;
         position: static;
-        /* Resetting position to static */
         width: 100%;
     }
 
@@ -149,71 +136,32 @@
     }
 }
 
-@media screen and (max-width: 575px) {
-    .serviceSection {
-        margin-top: 2rem;
-        flex-direction: column;
-        gap: 5rem;
-        padding: 0;
-        margin-bottom: 15rem;
-    }
-
+@media screen and (max-width: 746px) {
     .ser-right {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-row-gap: 12rem;
-        grid-column-gap: 3rem;
+        grid-row-gap: 18rem;
+        grid-column-gap: 2rem;
         position: static;
-        /* Resetting position to static */
         width: 100%;
     }
-
-
 }
 
-@media screen and (max-width: 520px) {
-    .serviceSection {
-        margin-top: 3rem;
-        flex-direction: column;
-        gap: 3rem;
-        height: 55rem;
-        margin-bottom: 10rem;
-    }
-
+@media screen and (max-width: 530px) {
     .ser-right {
-        margin-top: 5rem;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 12rem;
+        grid-row-gap: 18rem;
+        grid-column-gap: 2rem;
         position: static;
         width: 100%;
-    }
-
-    .ser-right>* {
-        display: flex;
+        margin-bottom: 3rem;
         justify-content: center;
         align-items: center;
-        width: 100%;
     }
-}
 
-@media screen and (max-width: 465px) {
     .serviceSection {
-        margin-top: 3rem;
-        margin-bottom: 12rem;
+        height: auto;
     }
-}
 
-@media screen and (max-width: 396px) {
-    .serviceSection {
-        margin-top: 3rem;
-        margin-bottom: 13rem;
-    }
-}
-
-@media screen and (max-width: 356px) {
-    .serviceSection {
-        margin-top: 3rem;
-        margin-bottom: 14rem;
-    }
 }
