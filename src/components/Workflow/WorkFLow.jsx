@@ -1,5 +1,5 @@
 import React from 'react'
-import "./WorkFlow.css"
+import "./WorkFLow.css"
 import FlowCard from './FlowCard'
 
 function WorkFlow() {
