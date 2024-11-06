@@ -1,139 +1,189 @@
 import { useState } from 'react';
-import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
-import "./Navbar.css";
-import Logo from "../../asserts/img/logo.svg";
+import Logo from "../../asserts/img/logo.png";
+import app from "../../asserts/img/app.png";
+import cloud from "../../asserts/img/cloud.png";
+import cyber from "../../asserts/img/cyber.png";
+import enduser from "../../asserts/img/enduser.png";
+import monitor from "../../asserts/img/monitor.png";
+import system from "../../asserts/img/system.png";
+import support from "../../asserts/img/support.png";
+import consulation from "../../asserts/img/consulation.png";
+import network from "../../asserts/img/network.png";
+import audio from "../../asserts/img/audio.png";
+
+// Merged Services (including hardware and software)
+const services = [
+    { name: 'Installation', href: '/services/installation', img: system },
+    { name: 'Maintenance', href: '/services/mainteinance', img: enduser },
+    { name: 'Training', href: '/services/training', img: consulation },
+    { name: 'Consulation', href: '/services/consulation', img: support },
+];
+
+const hardware = [
+    { name: 'Computer Systems', href: '/it-hardware/computer-systems', img: enduser },
+    { name: 'Touch Screens', href: '/it-hardware/touch-screens', img: app },
+    { name: 'Networking Equipment', href: '/it-hardware/networking', img: network },
+    { name: 'Audio & Video', href: '/it-hardware/audio', img: audio },
+    { name: 'POS Systems', href: '/it-hardware/pos', img: cloud },
+];
+
+const software = [
+    { name: 'Operating Systems', href: '/it-software/operating-system', img: monitor },
+    { name: 'POS Software', href: '/it-software/pos-software', img: system },
+    { name: 'Security & Network', href: '/it-software/security-network', img: cyber },
+];
 
 // Navigation Links
 const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'About Us', href: '/about', current: false },
-    { name: 'Services', href: '/services', current: false },
+];
+
+const contactHCM = [
     { name: 'HCM', href: '/hcm', current: false },
     { name: 'Contact Us', href: '/contact', current: false },
 ];
 
-// Merged Services (including hardware and software)
-const services = [
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'App Development', href: '/services/app-development' },
-    { name: 'UI/UX Design', href: '/services/ui-ux' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'IT Consulting', href: '/services/it-consulting' },
-    { name: 'Computer Systems', href: '/services/computer-systems' },
-    { name: 'Touch Screens', href: '/services/touch-screens' },
-    { name: 'Networking Equipment', href: '/services/networking' },
-    { name: 'POS Systems', href: '/services/pos' },
-    { name: 'Operating Systems', href: '/services/operating-system' },
-    { name: 'POS Software', href: '/services/pos-software' },
-    { name: 'Security & Network', href: '/services/security-network' },
-];
-
 export default function Navbar() {
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false); // State to toggle the mobile menu
+
+    const toggleMenu = () => {
+        setMenuOpen(prev => !prev); // Toggle the menu state
+    };
+
+    const closeMenu = () => {
+        setMenuOpen(false); // Close menu when a link is clicked
+    };
 
     return (
-        <Disclosure as="nav" className="custom-navbar bg-white">
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-40">
-                <div className="relative flex h-16 items-center justify-between">
+        <header className='shadow-md bg-white font-[sans-serif] tracking-wide relative'>
+            <section className="flex items-center justify-between py-2 border-gray-200 border-b min-h-[40px]">
+                <Link to="/" className="shrink-0 flex justify-center items-center flex-grow">
+                    <img src={Logo} alt="logo" className="w-[80px] sm:w-[80px]" />
+                </Link>
 
-                    {/* Logo on the left */}
-                    <div className="absolute inset-y-0 left-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <Link to="/" className="navLink">
-                            <img src={Logo} alt="Logo" className="logo" />
-                        </Link>
-                    </div>
+                {/* Hamburger Button for Mobile */}
+                <button className="lg:hidden text-gray-600" onClick={toggleMenu}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                        <path d="M3 12h18M3 6h18M3 18h18" />
+                    </svg>
+                </button>
+            </section>
 
-                    {/* Mobile menu button */}
-                    <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
-                        <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-300">
-                            <span className="sr-only">Open main menu</span>
-                            <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                            <XMarkIcon className="hidden h-6 w-6" aria-hidden="true" />
-                        </Disclosure.Button>
-                    </div>
-
-                    {/* Desktop Navigation Links */}
-                    <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
-                        <div className="hidden sm:block">
-                            <div className="flex space-x-10">
-                                {navigation.map((item) => (
-                                    item.name === 'Services' ? (
-                                        <div
-                                            key={item.name}
-                                            className="navLink relative"
-                                            onMouseEnter={() => setDropdownOpen(true)}
-                                            onMouseLeave={() => setDropdownOpen(false)}
-                                        >
-                                            <Link to={item.href} className="navLink">
-                                                {item.name}
-                                            </Link>
-                                            {dropdownOpen && (
-                                                <div className="absolute right-0 z-10 mt-2 w-128 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                                                    <div className="grid grid-cols-4 gap-4 p-4">
-                                                        {services.map((service) => (
-                                                            <Link
-                                                                key={service.name}
-                                                                to={service.href}
-                                                                className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                                            >
-                                                                {service.name}
-                                                            </Link>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            )}
-                                        </div>
-                                    ) : (
-                                        <Link key={item.name} to={item.href} className="navLink">
-                                            {item.name}
-                                        </Link>
-                                    )
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Mobile Menu (visible when open) */}
-            <Disclosure.Panel className="sm:hidden">
-                <div className="space-y-1 px-2 pb-3 pt-2">
+            {/* Mobile Menu Toggle */}
+            <div className={`lg:flex flex-wrap justify-center px-10 py-3 relative ${menuOpen ? 'block' : 'hidden'}`}>
+                <ul className='lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-2/3 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-4 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto'>
                     {navigation.map((item) => (
-                        <Disclosure.Button
-                            key={item.name}
-                            as={Link}
-                            to={item.href}
-                            className="navLink block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            {item.name}
-                        </Disclosure.Button>
+                        <li key={item.name} className='max-lg:border-b max-lg:px-3 max-lg:py-3'>
+                            <Link
+                                to={item.href}
+                                className={`hover:text-[#08b35f] ${item.current ? 'text-[#08b35f]' : 'text-gray-600'} font-semibold block text-[15px]`}
+                                onClick={closeMenu} // Close menu on click
+                            >
+                                {item.name}
+                            </Link>
+                        </li>
                     ))}
-                    {/* Mobile Services Dropdown */}
-                    <Disclosure>
-                        {({ open }) => (
-                            <>
-                                <Disclosure.Button className="navLink block px-3 py-2 rounded-md text-base font-medium">
-                                    Services
-                                </Disclosure.Button>
-                                <Disclosure.Panel className="pl-6">
-                                    {services.map((service) => (
-                                        <Link
-                                            key={service.name}
-                                            to={service.href}
-                                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100"
-                                        >
-                                            {service.name}
-                                        </Link>
-                                    ))}
-                                </Disclosure.Panel>
-                            </>
-                        )}
-                    </Disclosure>
-                </div>
-            </Disclosure.Panel>
-        </Disclosure>
+
+                    {/* Services Dropdown */}
+                    <li className='group max-lg:border-b max-lg:px-3 max-lg:py-3 relative'>
+                        <Link
+                            to="/services"
+                            className='hover:text-[#08b35f] hover:fill-[#08b35f] text-gray-600 font-semibold text-[15px] block'
+                            onClick={closeMenu} // Close menu on click
+                        >
+                            Services
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" className="ml-1 inline-block" viewBox="0 0 24 24">
+                                <path d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z" />
+                            </svg>
+                        </Link>
+                        <ul className="absolute top-5 left-0 z-50 block space-y-2 shadow-lg bg-white max-h-0 overflow-hidden min-w-[250px] group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500">
+                            {services.map((service) => (
+                                <li key={service.name} className="border-b py-3 flex items-center gap-3">
+                                    <img src={service.img} alt={service.name} className="w-10 h-10 object-cover" />
+                                    <Link
+                                        to={service.href}
+                                        className="hover:text-[#08b35f] text-gray-600 font-semibold text-[15px] block"
+                                        onClick={closeMenu} // Close menu on click
+                                    >
+                                        {service.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </li>
+
+                    {/* Hardware Solutions Dropdown */}
+                    <li className='group max-lg:border-b max-lg:px-3 max-lg:py-3 relative'>
+                        <Link
+                            to="/it-hardware"
+                            className='hover:text-[#08b35f] hover:fill-[#08b35f] text-gray-600 font-semibold text-[15px] block'
+                            onClick={closeMenu} // Close menu on click
+                        >
+                            Hardware Solutions
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" className="ml-1 inline-block" viewBox="0 0 24 24">
+                                <path d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z" />
+                            </svg>
+                        </Link>
+                        <ul className="absolute top-5 left-0 z-50 block space-y-2 shadow-lg bg-white max-h-0 overflow-hidden min-w-[250px] group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500">
+                            {hardware.map((item) => (
+                                <li key={item.name} className="border-b py-3 flex items-center gap-3">
+                                    <img src={item.img} alt={item.name} className="w-10 h-10 object-cover" />
+                                    <Link
+                                        to={item.href}
+                                        className="hover:text-[#08b35f] text-gray-600 font-semibold text-[15px] block"
+                                        onClick={closeMenu} // Close menu on click
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </li>
+
+                    {/* Software Solutions Dropdown */}
+                    <li className='group max-lg:border-b max-lg:px-3 max-lg:py-3 relative'>
+                        <Link
+                            to="/it-software"
+                            className='hover:text-[#08b35f] hover:fill-[#08b35f] text-gray-600 font-semibold text-[15px] block'
+                            onClick={closeMenu} // Close menu on click
+                        >
+                            Software Solutions
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" className="ml-1 inline-block" viewBox="0 0 24 24">
+                                <path d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z" />
+                            </svg>
+                        </Link>
+                        <ul className="absolute top-5 left-0 z-50 block space-y-2 shadow-lg bg-white max-h-0 overflow-hidden min-w-[250px] group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500">
+                            {software.map((item) => (
+                                <li key={item.name} className="border-b py-3 flex items-center gap-3">
+                                    <img src={item.img} alt={item.name} className="w-10 h-10 object-cover" />
+                                    <Link
+                                        to={item.href}
+                                        className="hover:text-[#08b35f] text-gray-600 font-semibold text-[15px] block"
+                                        onClick={closeMenu} // Close menu on click
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </li>
+
+                    {/* Contact HCM */}
+                    {contactHCM.map((item) => (
+                        <li key={item.name} className='max-lg:border-b max-lg:px-3 max-lg:py-3'>
+                            <Link
+                                to={item.href}
+                                className={`hover:text-[#08b35f] ${item.current ? 'text-[#08b35f]' : 'text-gray-600'} font-semibold block text-[15px]`}
+                                onClick={closeMenu} // Close menu on click
+                            >
+                                {item.name}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </header>
     );
 }

@@ -24,10 +24,10 @@ function HomeAbout() {
                                         Welcome To LPH</h2>
                                     <p
                                         class="text-gray-100 text-base font-normal leading-relaxed lg:text-start text-center">
-                                        LPH is a multi-dimensional IT company specializing in product and project-based solutions for business clients worldwide. We provide a comprehensive set of IT trainings and development solutions, including Customer Relationship Management System (CRMS), Human Resource Management System (HRMS), Enterprise Resource Planning Management System (ERPMS), Data Center solutions, Mobile & Web App Development, UI/UX Design, Custom Development, Digital Marketing, Content Writing, Graphic Designing, Blockchain Development, and E-commerce</p>
+                                        Launch Point Holding Company LLC is a premier provider of IT hardware and networking solutions, based in Saudi Arabia Head Quarter, Global Presence USA | UK | China |. With an extensive catalog spanning a wide range of leading global brands, we cater to diverse business requirements—ensuring that our clients find exactly what they need, when they need it.</p>
                                     <p
                                         class="text-gray-100 text-base font-normal leading-relaxed lg:text-start text-center">
-                                        Owais Ahmad Khan has an entrepreneurial mindset and exceptional management skills, with over 15 years of experience in the IT industry. He has worked with renowned clients and has received several awards for his innovative solutions.</p>
+                                        Launch Point Holding Company LLC is known for its expansive selection and reliable service. With access to the full spectrum of IT hardware and networking devices from the world’s leading brands, we ensure our clients always have access to the latest, most dependable technology solutions</p>
                                 </div>
                             </div>
 

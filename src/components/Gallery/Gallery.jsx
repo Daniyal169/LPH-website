@@ -24,9 +24,7 @@ function Gallery() {
         { src: h6, alt: "gallery-photo-6" },
         { src: h7, alt: "gallery-photo-7" },
         { src: h8, alt: "gallery-photo-8" },
-        { src: h9, alt: "gallery-photo-9" },
-        { src: h10, alt: "gallery-photo-10" },
-        { src: h11, alt: "gallery-photo-11" },
+
     ];
 
     return (

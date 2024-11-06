@@ -1,55 +1,31 @@
 import React from "react";
 
-import cloud from "../../asserts/img/cloud.png";
-import cyber from "../../asserts/img/cyber.png";
-import consul from "../../asserts/img/consul.png";
-import enduser from "../../asserts/img/enduser.png";
-import plan from "../../asserts/img/plan.png";
-import print from "../../asserts/img/print.png";
-import softsol from "../../asserts/img/softsol.png";
-import support from "../../asserts/img/support.png";
+import consulation from "../../asserts/img/consulation.png";
+import maintain from "../../asserts/img/maintain.png";
+import setup from "../../asserts/img/setup.png";
+import train from "../../asserts/img/train.png";
 
 // Define card data to map through for rendering
 const cardData = [
     {
-        icon: cloud,
-        title: "Cloud Services",
-        description: "Providing reliable and scalable cloud solutions tailored to your business."
+        icon: setup,
+        title: "Installation & Setup",
+        description: "We provide thorough setup, installation, and integration for equipment, tailored to meet your environment’s needs."
     },
     {
-        icon: cyber,
-        title: "Cyber Security",
-        description: "Advanced cybersecurity measures to protect your business from online threats."
+        icon: maintain,
+        title: "Maintenance & Support",
+        description: "Reliable support and maintenance packages to minimize downtime and ensure consistent operations for your business."
     },
     {
-        icon: consul,
-        title: "Consulting",
-        description: "Expert consulting services to help your business grow and succeed."
+        icon: consulation,
+        title: "Consulting & Procurement",
+        description: "Receive expert advice on selecting the best hardware and software, customized to fit your unique business needs."
     },
     {
-        icon: enduser,
-        title: "End-User Solutions",
-        description: "Custom solutions designed for enhanced user experiences."
-    },
-    {
-        icon: plan,
-        title: "Strategic Planning",
-        description: "Comprehensive strategies to take your business to the next level."
-    },
-    {
-        icon: print,
-        title: "Printing Services",
-        description: "High-quality printing services for all your branding needs."
-    },
-    {
-        icon: softsol,
-        title: "Software Solutions",
-        description: "Innovative software solutions crafted to meet your business demands."
-    },
-    {
-        icon: support,
-        title: "Customer Support",
-        description: "Reliable support services to ensure satisfaction and loyalty."
+        icon: train,
+        title: "Training Programs",
+        description: "Comprehensive staff training on new hardware and software, boosting productivity and enhancing efficiency overall."
     }
 ];
 

@@ -5,13 +5,15 @@ import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
 import Layout from './Layout';
 import ServicesPage from './Pages/ServicesPage';
-import HardwarePage from './Pages/featurePages/HardwarePage';
-import SoftwarePage from './Pages/featurePages/SoftwarePage';
-import ServicePage from './Pages/featurePages/ServicePage';
+import SingleHardware from './Pages/featurePages/SingleHardware';
+import SingleSoftware from './Pages/featurePages/SingleSoftware';
+import SingleService from './Pages/featurePages/SingleService';
 import HCMPage from './Pages/HCMPage';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import HardwarePage from './Pages/HardwarePage';
+import SoftwarePage from './Pages/SoftwarePage';
 // ..
 AOS.init();
 
@@ -26,9 +28,11 @@ const router = createBrowserRouter([
       { path: 'hcm', element: <HCMPage /> },
       { path: 'contact', element: <ContactPage /> },
       { path: '*', element: <HomePage /> },
-      { path: 'it-hardware/:slug', element: <HardwarePage /> },
-      { path: 'it-software/:slug', element: <SoftwarePage /> },
-      { path: 'services/:slug', element: <ServicePage /> },
+      { path: 'it-hardware', element: <HardwarePage /> },
+      { path: 'it-software', element: <SoftwarePage /> },
+      { path: 'it-hardware/:slug', element: <SingleHardware /> },
+      { path: 'it-software/:slug', element: <SingleSoftware /> },
+      { path: 'services/:slug', element: <SingleService /> },
     ],
   },
 ]);

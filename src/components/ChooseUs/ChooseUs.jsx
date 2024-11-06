@@ -23,9 +23,9 @@ const cardData = [
                 <line x1="17" y1="17" x2="17" y2="17.01"></line>
             </svg>
         ),
-        title: "Customizable",
+        title: "Wide Range of Products",
         description:
-            "Tailor your landing page's look and feel, from the color scheme to the font size, to the design of the page.",
+            "Access to all the top IT brands and models in the market.",
     },
     {
         icon: (
@@ -45,9 +45,9 @@ const cardData = [
                 <polyline points="13 3 13 10 19 10 11 21 11 14 5 14 13 3"></polyline>
             </svg>
         ),
-        title: "Fast Performance",
+        title: "Expertise & Experience",
         description:
-            "We build our templates for speed in mind, for super-fast load times so your customers never waver.",
+            "A dedicated team with industry expertise to provide guidance on the best solutions.",
     },
     {
         icon: (
@@ -72,9 +72,9 @@ const cardData = [
                 <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
             </svg>
         ),
-        title: "Fully Featured",
+        title: "Customer-Centric Approach",
         description:
-            "Everything you need to succeed and launch your landing page, right out of the box. No need to install anything else.",
+            "Tailored recommendations and high-quality support for long-term client satisfaction.",
     },
 ];
 
@@ -86,11 +86,9 @@ const ChooseUs = () => {
                 className="relative block px-6 py-10 md:py-20 md:px-10 border-t border-neutral-900"
             >
                 <div className="relative mx-auto max-w-5xl text-center">
-                    <span className="text-gray-400 my-3 flex items-center justify-center font-medium uppercase tracking-wider">
-                        Why choose us
-                    </span>
+
                     <h1 className="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
-                        Why SMBs, E-commerce & Web Agencies choose us?
+                        Why Launch Point Holding Company LLC?
                     </h1>
 
                 </div>
