@@ -1,5 +1,5 @@
 import React from 'react'
-import "./WorkFlow.css"
+import "./WorkFLow.css"
 
 function FlowCard({ hour, title, content }) {
     return (
