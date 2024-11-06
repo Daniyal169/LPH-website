@@ -10,7 +10,7 @@ function HomePage() {
     return (
         <>
             <HomeHero />
-           {/* https://www.pexels.com/video/946147/ */}
+            {/* https://www.pexels.com/video/946147/ */}
             <div className="app">
                 <HomeAbout />
                 <ServiceSection />

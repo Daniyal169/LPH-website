@@ -38,8 +38,8 @@ function Testimonial() {
 
     return (
         <div className="testimonial">
-            <h1 className="testHead">Testimonial</h1>
-            <div className="testimonialBoxes">
+            <h1 className="testHead" data-aos="slide-right">Testimonial</h1>
+            <div className="testimonialBoxes" data-aos="fade-up">
 
                 <Swiper
                     modules={[Autoplay]}

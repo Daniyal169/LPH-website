@@ -3,18 +3,18 @@ import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import "./Navbar.css";
-import Logo from "../../asserts/img/logo.png"; // Corrected assets path
+import Logo from "../../asserts/img/logo.svg";
 
 // Navigation Links
 const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'About Us', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
-    { name: 'Software Solutions', href: '/software', current: false },
-    { name: 'Hardware Solutions', href: '/hardware', current: false },
+    { name: 'HCM', href: '/hcm', current: false },
     { name: 'Contact Us', href: '/contact', current: false },
 ];
 
+// Merged Services (including hardware and software)
 const services = [
     { name: 'Web Development', href: '/services/web-development' },
     { name: 'App Development', href: '/services/app-development' },
@@ -22,27 +22,17 @@ const services = [
     { name: 'Cybersecurity', href: '/services/cybersecurity' },
     { name: 'Data Analytics', href: '/services/data-analytics' },
     { name: 'IT Consulting', href: '/services/it-consulting' },
-];
-
-const hardware = [
-    { name: 'Computer Systems', href: '/it-hardware/computer-systems' },
-    { name: 'Touch Screens', href: '/it-hardware/touch-screens' },
-    { name: 'Networking Equipment', href: '/it-hardware/networking' },
-    { name: 'POS Systems', href: '/it-hardware/pos' },
-];
-
-const software = [
-    { name: 'Operating Systems', href: '/it-software/operating-system' },
-    { name: 'POS Software', href: '/it-software/pos-software' },
-    { name: 'Security & Network', href: '/it-software/security-network' },
+    { name: 'Computer Systems', href: '/services/computer-systems' },
+    { name: 'Touch Screens', href: '/services/touch-screens' },
+    { name: 'Networking Equipment', href: '/services/networking' },
+    { name: 'POS Systems', href: '/services/pos' },
+    { name: 'Operating Systems', href: '/services/operating-system' },
+    { name: 'POS Software', href: '/services/pos-software' },
+    { name: 'Security & Network', href: '/services/security-network' },
 ];
 
 export default function Navbar() {
-    const [dropdownOpen, setDropdownOpen] = useState({
-        services: false,
-        hardware: false,
-        software: false,
-    });
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     return (
         <Disclosure as="nav" className="custom-navbar bg-white">
@@ -70,20 +60,20 @@ export default function Navbar() {
                         <div className="hidden sm:block">
                             <div className="flex space-x-10">
                                 {navigation.map((item) => (
-                                    item.name === 'Services' || item.name === 'Hardware Solutions' || item.name === 'Software Solutions' ? (
+                                    item.name === 'Services' ? (
                                         <div
                                             key={item.name}
                                             className="navLink relative"
-                                            onMouseEnter={() => setDropdownOpen(prev => ({ ...prev, [item.name.toLowerCase().replace(' ', '')]: true }))}
-                                            onMouseLeave={() => setDropdownOpen(prev => ({ ...prev, [item.name.toLowerCase().replace(' ', '')]: false }))}
+                                            onMouseEnter={() => setDropdownOpen(true)}
+                                            onMouseLeave={() => setDropdownOpen(false)}
                                         >
                                             <Link to={item.href} className="navLink">
                                                 {item.name}
                                             </Link>
-                                            {dropdownOpen[item.name.toLowerCase().replace(' ', '')] && (
-                                                <div className="absolute left-2 z-10 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                                                    <div className="flex flex-col p-4">
-                                                        {(item.name === 'Services' ? services : item.name === 'Hardware Solutions' ? hardware : software).map((service) => (
+                                            {dropdownOpen && (
+                                                <div className="absolute right-0 z-10 mt-2 w-128 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                                                    <div className="grid grid-cols-4 gap-4 p-4">
+                                                        {services.map((service) => (
                                                             <Link
                                                                 key={service.name}
                                                                 to={service.href}
@@ -136,48 +126,6 @@ export default function Navbar() {
                                             className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100"
                                         >
                                             {service.name}
-                                        </Link>
-                                    ))}
-                                </Disclosure.Panel>
-                            </>
-                        )}
-                    </Disclosure>
-                    {/* Mobile Hardware Dropdown */}
-                    <Disclosure>
-                        {({ open }) => (
-                            <>
-                                <Disclosure.Button className="navLink block px-3 py-2 rounded-md text-base font-medium">
-                                    Hardware Solutions
-                                </Disclosure.Button>
-                                <Disclosure.Panel className="pl-6">
-                                    {hardware.map((item) => (
-                                        <Link
-                                            key={item.name}
-                                            to={item.href}
-                                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100"
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    ))}
-                                </Disclosure.Panel>
-                            </>
-                        )}
-                    </Disclosure>
-                    {/* Mobile Software Dropdown */}
-                    <Disclosure>
-                        {({ open }) => (
-                            <>
-                                <Disclosure.Button className="navLink block px-3 py-2 rounded-md text-base font-medium">
-                                    Software Solutions
-                                </Disclosure.Button>
-                                <Disclosure.Panel className="pl-6">
-                                    {software.map((item) => (
-                                        <Link
-                                            key={item.name}
-                                            to={item.href}
-                                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100"
-                                        >
-                                            {item.name}
                                         </Link>
                                     ))}
                                 </Disclosure.Panel>

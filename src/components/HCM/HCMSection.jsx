@@ -13,48 +13,63 @@ import support from "../../asserts/img/support.png";
 const cardData = [
     {
         icon: cloud,
-        title: "Cloud Services",
-        description: "Providing reliable and scalable cloud solutions tailored to your business."
+        title: "Payroll Management",
+        description: "Efficiently manage payroll processing to ensure timely and accurate payments."
     },
     {
         icon: cyber,
-        title: "Cyber Security",
-        description: "Advanced cybersecurity measures to protect your business from online threats."
+        title: "Attendance Tracking",
+        description: "Track employee attendance seamlessly to maintain accurate records."
     },
     {
         icon: consul,
-        title: "Consulting",
-        description: "Expert consulting services to help your business grow and succeed."
+        title: "Performance Evaluation",
+        description: "Evaluate employee performance with robust tracking and assessment tools."
     },
     {
         icon: enduser,
-        title: "End-User Solutions",
-        description: "Custom solutions designed for enhanced user experiences."
+        title: "Employee Self-Service",
+        description: "Empower employees to manage their profiles and access information."
     },
     {
         icon: plan,
-        title: "Strategic Planning",
-        description: "Comprehensive strategies to take your business to the next level."
+        title: "Job Portal",
+        description: "Streamlined job posting and application process for effective hiring."
     },
     {
         icon: print,
-        title: "Printing Services",
-        description: "High-quality printing services for all your branding needs."
+        title: "Task Management",
+        description: "Organize and prioritize tasks for enhanced team productivity."
     },
     {
         icon: softsol,
-        title: "Software Solutions",
-        description: "Innovative software solutions crafted to meet your business demands."
+        title: "Loan Management",
+        description: "Manage employee loan requests and tracking efficiently."
     },
     {
         icon: support,
-        title: "Customer Support",
-        description: "Reliable support services to ensure satisfaction and loyalty."
+        title: "Letters and Forms",
+        description: "Generate essential letters and forms to streamline documentation."
+    },
+    {
+        icon: support,
+        title: "Custody Management",
+        description: "Track and manage custody of company assets and resources."
+    },
+    {
+        icon: support,
+        title: "End of Service",
+        description: "Ensure smooth end-of-service processing for departing employees."
+    },
+    {
+        icon: support,
+        title: "Decision Management",
+        description: "Make data-driven decisions with comprehensive management tools."
     }
 ];
 
 
-const AllServices = () => {
+const HCMSection = () => {
     return (
         <div className="bg-transparent">
             <section
@@ -64,16 +79,16 @@ const AllServices = () => {
                 <div className="relative mx-auto max-w-5xl text-center">
 
                     <h1 className="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
-                        A Sneak Peek at Our Services
+                        Streamline Your Processes with Our Impulse HCM 360°
                     </h1>
                     <p className="mx-auto my-4 w-full max-w-xl text-center font-medium leading-relaxed tracking-wide text-gray-400">
-                        We are a full-service IT company that provides customized solutions for your business needs. Whether you need software development, web design, cloud computing, or IT consulting, we have the expertise and experience to deliver high-quality results.
+                        Our specialized team ensures to provide a user-friendly interface and flexibility, making it accessible for companies of different sizes and industries. We also aim to enhance HR efficiency, reduce manual work, and improve overall human resource operations, leading to increased productivity and employee satisfaction.
                     </p>
                 </div>
 
                 <div className="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3">
                     {cardData.map((card, index) => (
-                        <div key={index} className="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
+                        <div key={index} className="rounded-md border border-neutral-900 bg-neutral-900/100 p-8 text-center shadow">
                             <div
                                 className="button-text mx-auto flex h-28 w-28 items-center justify-center "
 
@@ -93,4 +108,4 @@ const AllServices = () => {
     );
 };
 
-export default AllServices;
+export default HCMSection;

@@ -7,14 +7,14 @@ function HomeAbout() {
         <section class="py-6 relative xl:mr-0 lg:mr-5 mr-0">
             <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
                 <div class="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
-                    <div class="w-full lg:justify-start justify-center items-start flex">
+                    <div class="w-full lg:justify-start justify-center items-start flex" data-aos="slide-right">
                         <div
                             class="sm:w-[564px] w-full sm:h-[646px] h-full sm:bg-gray-100 rounded-3xl sm:border border-gray-200 relative">
                             <img class="sm:mt-5 sm:ml-5 w-full h-full rounded-3xl object-cover"
                                 src={ceo} alt="about Us image" />
                         </div>
                     </div>
-                    <div class="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
+                    <div class="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex" data-aos="slide-left">
                         <div class="w-full flex-col justify-center items-start gap-8 flex">
                             <div class="flex-col justify-start lg:items-start items-center gap-4 flex">
                                 <h6 class="text-gray-400 text-base font-normal leading-relaxed">About Us</h6>
