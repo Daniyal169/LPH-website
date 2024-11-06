@@ -16,25 +16,25 @@ const navigation = [
 ];
 
 const services = [
-    { name: 'Web Development', href: '/' },
-    { name: 'App Development', href: '/' },
-    { name: 'UI/UX Design', href: '/' },
-    { name: 'Cybersecurity', href: '/' },
-    { name: 'Data Analytics', href: '/' },
-    { name: 'IT Consulting', href: '/' },
+    { name: 'Web Development', href: '/services/web-development' },
+    { name: 'App Development', href: '/services/app-development' },
+    { name: 'UI/UX Design', href: '/services/ui-ux' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'Data Analytics', href: '/services/data-analytics' },
+    { name: 'IT Consulting', href: '/services/it-consulting' },
 ];
 
 const hardware = [
-    { name: 'Computer Systems', href: '/' },
-    { name: 'Touch Screens', href: '/' },
-    { name: 'Networking Equipment', href: '/' },
-    { name: 'POS Systems', href: '/' },
+    { name: 'Computer Systems', href: '/it-hardware/computer-systems' },
+    { name: 'Touch Screens', href: '/it-hardware/touch-screens' },
+    { name: 'Networking Equipment', href: '/it-hardware/networking' },
+    { name: 'POS Systems', href: '/it-hardware/pos' },
 ];
 
 const software = [
-    { name: 'Operating Systems', href: '/' },
-    { name: 'POS Software', href: '/' },
-    { name: 'Security & Network', href: '/' },
+    { name: 'Operating Systems', href: '/it-software/operating-system' },
+    { name: 'POS Software', href: '/it-software/pos-software' },
+    { name: 'Security & Network', href: '/it-software/security-network' },
 ];
 
 export default function Navbar() {
