@@ -1,6 +1,6 @@
 import React from 'react'
 import "./WorkFLow.css"
-import FlowCard from './FlowCard'
+import FlowCard from './FlowCard.jsx'
 
 function WorkFlow() {
     const work = [
