@@ -10,7 +10,7 @@ function HomeHero() {
                 <video autoPlay muted loop className="w-full opacity-20 relative object-cover">
                     <source src={vid} type="video/mp4" />
                 </video>
-                
+
                 <div className="hero absolute">
                     <div className="w-full">
 
