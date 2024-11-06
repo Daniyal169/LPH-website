@@ -1,9 +1,8 @@
 import React from 'react'
 import "./ServiceSection.css"
-import design from "../../asserts/img/design.png";
-import coding from "../../asserts/img/coding.png";
-import coding2 from "../../asserts/img/coding2.png";
-import design2 from "../../asserts/img/design2.png";
+import cloud from "../../asserts/img/cloud.png";
+import cyber from "../../asserts/img/cyber.png";
+import consul from "../../asserts/img/consul.png";
 import ServiceCard from './ServiceCard';
 
 function ServiceSection() {
@@ -22,24 +21,24 @@ function ServiceSection() {
                 <div >
                     <ServiceCard
 
-                        image={design2}
-                        heading={"Consulting"}
+                        image={cloud}
+                        heading={"Cloud Computing"}
                         detail={"Expert business consulting services to accelerate growth."}
                     />
                 </div>
                 <div >
                     <ServiceCard
 
-                        image={coding}
-                        heading={"Investment"}
+                        image={cyber}
+                        heading={"CyberSecurity"}
                         detail={"Strategic investments for long-term success."}
                     />
                 </div>
                 <div >
                     <ServiceCard
 
-                        image={design}
-                        heading={"Tech Solutions"}
+                        image={consul}
+                        heading={"Consultancy"}
                         detail={"Cutting-edge technology solutions for your business."}
                     />
                 </div>

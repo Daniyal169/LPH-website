@@ -1,217 +1,58 @@
 import React from "react";
 
+import cloud from "../../asserts/img/cloud.png";
+import cyber from "../../asserts/img/cyber.png";
+import consul from "../../asserts/img/consul.png";
+import enduser from "../../asserts/img/enduser.png";
+import plan from "../../asserts/img/plan.png";
+import print from "../../asserts/img/print.png";
+import softsol from "../../asserts/img/softsol.png";
+import support from "../../asserts/img/support.png";
+
 // Define card data to map through for rendering
 const cardData = [
     {
-        icon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-color-swatch"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M19 3h-4a2 2 0 0 0 -2 2v12a4 4 0 0 0 8 0v-12a2 2 0 0 0 -2 -2"></path>
-                <path d="M13 7.35l-2 -2a2 2 0 0 0 -2.828 0l-2.828 2.828a2 2 0 0 0 0 2.828l9 9"></path>
-                <path d="M7.3 13h-2.3a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h12"></path>
-                <line x1="17" y1="17" x2="17" y2="17.01"></line>
-            </svg>
-        ),
-        title: "Customizable",
-        description:
-            "Tailor your landing page's look and feel, from the color scheme to the font size, to the design of the page.",
+        icon: cloud,
+        title: "Cloud Services",
+        description: "Providing reliable and scalable cloud solutions tailored to your business."
     },
     {
-        icon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-bolt"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <polyline points="13 3 13 10 19 10 11 21 11 14 5 14 13 3"></polyline>
-            </svg>
-        ),
-        title: "Fast Performance",
-        description:
-            "We build our templates for speed in mind, for super-fast load times so your customers never waver.",
+        icon: cyber,
+        title: "Cyber Security",
+        description: "Advanced cybersecurity measures to protect your business from online threats."
     },
     {
-        icon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-tools"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
-                <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
-                <polyline points="12 8 7 3 3 7 8 12"></polyline>
-                <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
-                <polyline points="16 12 21 17 17 21 12 16"></polyline>
-                <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
-            </svg>
-        ),
-        title: "Fully Featured",
-        description:
-            "Everything you need to succeed and launch your landing page, right out of the box. No need to install anything else.",
+        icon: consul,
+        title: "Consulting",
+        description: "Expert consulting services to help your business grow and succeed."
     },
     {
-        icon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-tools"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
-                <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
-                <polyline points="12 8 7 3 3 7 8 12"></polyline>
-                <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
-                <polyline points="16 12 21 17 17 21 12 16"></polyline>
-                <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
-            </svg>
-        ),
-        title: "Fully Featured",
-        description:
-            "Everything you need to succeed and launch your landing page, right out of the box. No need to install anything else.",
+        icon: enduser,
+        title: "End-User Solutions",
+        description: "Custom solutions designed for enhanced user experiences."
     },
     {
-        icon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-tools"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
-                <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
-                <polyline points="12 8 7 3 3 7 8 12"></polyline>
-                <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
-                <polyline points="16 12 21 17 17 21 12 16"></polyline>
-                <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
-            </svg>
-        ),
-        title: "Fully Featured",
-        description:
-            "Everything you need to succeed and launch your landing page, right out of the box. No need to install anything else.",
+        icon: plan,
+        title: "Strategic Planning",
+        description: "Comprehensive strategies to take your business to the next level."
     },
     {
-        icon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-tools"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
-                <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
-                <polyline points="12 8 7 3 3 7 8 12"></polyline>
-                <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
-                <polyline points="16 12 21 17 17 21 12 16"></polyline>
-                <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
-            </svg>
-        ),
-        title: "Fully Featured",
-        description:
-            "Everything you need to succeed and launch your landing page, right out of the box. No need to install anything else.",
+        icon: print,
+        title: "Printing Services",
+        description: "High-quality printing services for all your branding needs."
     },
     {
-        icon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-tools"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
-                <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
-                <polyline points="12 8 7 3 3 7 8 12"></polyline>
-                <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
-                <polyline points="16 12 21 17 17 21 12 16"></polyline>
-                <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
-            </svg>
-        ),
-        title: "Fully Featured",
-        description:
-            "Everything you need to succeed and launch your landing page, right out of the box. No need to install anything else.",
+        icon: softsol,
+        title: "Software Solutions",
+        description: "Innovative software solutions crafted to meet your business demands."
     },
     {
-        icon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-tools"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
-                <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
-                <polyline points="12 8 7 3 3 7 8 12"></polyline>
-                <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
-                <polyline points="16 12 21 17 17 21 12 16"></polyline>
-                <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
-            </svg>
-        ),
-        title: "Fully Featured",
-        description:
-            "Everything you need to succeed and launch your landing page, right out of the box. No need to install anything else.",
-    },
+        icon: support,
+        title: "Customer Support",
+        description: "Reliable support services to ensure satisfaction and loyalty."
+    }
 ];
+
 
 const AllServices = () => {
     return (
@@ -240,8 +81,9 @@ const AllServices = () => {
                                     borderColor: "rgb(93, 79, 240)",
                                 }}
                             >
-                                {card.icon}
+                                <img src={card.icon} alt={card.title} className="h-6 w-6" />
                             </div>
+
                             <h3 className="mt-6 text-gray-400">{card.title}</h3>
                             <p className="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
                                 {card.description}
