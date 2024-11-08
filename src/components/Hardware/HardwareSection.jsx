@@ -77,10 +77,10 @@ const HardwareSection = () => {
             >
                 <div className="relative mx-auto max-w-5xl text-center">
 
-                    <h1 className="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
+                    <h1 className="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl" data-aos="slide-right">
                         Enhance Your Business Efficiency with Our Cutting-Edge Hardware Solutions
                     </h1>
-                    <p className="mx-auto my-4 w-full max-w-xl text-center font-medium leading-relaxed tracking-wide text-gray-400">
+                    <p className="mx-auto my-4 w-full max-w-xl text-center font-medium leading-relaxed tracking-wide text-gray-400" data-aos="fade-in">
                         Our comprehensive range of high-performance hardware, from desktops and laptops to networking equipment and POS systems, is designed to meet the demands of businesses of all sizes. We ensure seamless integration, robust security, and unparalleled productivity, helping you achieve optimal performance and business success.
                     </p>
 
@@ -88,7 +88,7 @@ const HardwareSection = () => {
 
                 <div className="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3">
                     {cardData.map((card, index) => (
-                        <div key={index} className="rounded-md border border-neutral-900 bg-neutral-900/100 p-8 text-center shadow">
+                        <div key={index} className="rounded-md border border-neutral-900 bg-neutral-900/100 p-8 text-center shadow" data-aos="fade-up">
                             <div
                                 className="button-text mx-auto flex h-28 w-28 items-center justify-center "
 

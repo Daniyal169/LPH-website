@@ -10,9 +10,9 @@ function Accordion() {
 
     return (
         <div className="accordion">
-            <h1>Frequently Asked Questions</h1>
+            <h1 data-aos="slide-right">Frequently Asked Questions</h1>
             <div className="accordionCont">
-                <div className="mx-auto max-w-7xl ">
+                <div className="mx-auto max-w-7xl" data-aos="fade-up">
 
                     {/* Accordion Item 1 */}
                     <div className="accordion-item">

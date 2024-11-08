@@ -4,12 +4,12 @@ function ContactHero() {
     return (
         <div className="sm:flex items-center max-w-screen-xl mx-auto">
             <div className="sm:w-1/2 p-10">
-                <div className="image object-center text-center">
+                <div className="image object-center text-center" data-aos="slde-right">
                     <img src="https://i.imgur.com/WbQnbas.png" alt="Our Company" />
                 </div>
             </div>
             <div className="sm:w-1/2 p-5">
-                <div className="text">
+                <div className="text" data-aos="fade-in">
                     <span className="text-gray-500 border-b-2  uppercase">Lets Connect</span>
                     <h1 className="my-4 font-bold text-3xl sm:text-4xl">
                         Contact Us

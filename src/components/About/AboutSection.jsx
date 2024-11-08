@@ -10,7 +10,7 @@ function AboutSection() {
                 <div class="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
                     <div class="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
                         <div class="w-full flex-col justify-center items-start gap-8 flex">
-                            <div class="flex-col justify-start lg:items-start items-center gap-4 flex">
+                            <div class="flex-col justify-start lg:items-start items-center gap-4 flex" data-aos="slide-right">
                                 <h6 class="text-gray-400 text-base font-normal leading-relaxed">About Us</h6>
                                 <div class="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
                                     <h2
@@ -21,7 +21,7 @@ function AboutSection() {
                                         Launch Point Holding Company LLC is a premier provider of IT hardware and networking solutions, based in Saudi Arabia Head Quarter, Global Presence USA | UK | China |. With an extensive catalog spanning a wide range of leading global brands, we cater to diverse business requirements—ensuring that our clients find exactly what they need, when they need it</p>
                                 </div>
                             </div>
-                            <div class="w-full flex-col justify-center items-start gap-6 flex">
+                            <div class="w-full flex-col justify-center items-start gap-6 flex" data-aos="slide-right">
                                 <div class="w-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
                                     <div
                                         class="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
@@ -64,7 +64,7 @@ function AboutSection() {
 
                         </div>
                     </div>
-                    <div class="w-full lg:justify-start justify-center items-start flex">
+                    <div class="w-full lg:justify-start justify-center items-start flex" data-aos="slide-left">
                         <div
                             class="sm:w-[564px] w-full sm:h-[646px] h-full sm:bg-gray-100 rounded-3xl sm:border border-gray-200 relative">
                             <img class="sm:mt-5 sm:ml-5 w-full h-full rounded-3xl object-cover"

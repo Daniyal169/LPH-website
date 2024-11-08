@@ -7,7 +7,7 @@ import location from "../../asserts/img/location.png";
 const ContactDetail = () => {
     return (
         <div className="bg-neutral-900/100 py-12 my-8">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-in">
                 <div className="lg:text-center">
                     <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-300 sm:text-4xl">
                         Location

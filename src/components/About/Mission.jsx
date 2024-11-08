@@ -4,8 +4,8 @@ import "./Mission.css"
 function Mission() {
     return (
         <div className="mission">
-            <div className="missionUp">
-                <div className="missionRight">
+            <div className="missionUp" data-aos="fade-up">
+                <div className="missionRight" >
                     <h2>Our Mission</h2>
                     <p>To empower businesses with top-quality IT infrastructure and networking equipment, delivering comprehensive solutions that drive efficiency, security, and growth.</p>
                 </div>
@@ -16,7 +16,7 @@ function Mission() {
                 </div>
             </div>
             <div className="missionDown mt-20">
-                <section className="bg-gray-100 py-12 px-4">
+                <section className="bg-gray-100 py-12 px-4" data-aos="fade-up">
                     <h2 className="text-2xl font-bold text-center text-gray-900">Our Core Values</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-5xl mx-auto">
                         {[

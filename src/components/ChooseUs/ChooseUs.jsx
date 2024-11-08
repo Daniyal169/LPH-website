@@ -87,7 +87,7 @@ const ChooseUs = () => {
             >
                 <div className="relative mx-auto max-w-5xl text-center">
 
-                    <h1 className="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
+                    <h1 className="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl" data-aos="slide-right">
                         Why Launch Point Holding Company LLC?
                     </h1>
 
@@ -95,12 +95,12 @@ const ChooseUs = () => {
 
                 <div className="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3">
                     {cardData.map((card, index) => (
-                        <div key={index} className="rounded-md border border-neutral-500 bg-neutral-700/50 p-8 text-center shadow">
+                        <div key={index} className="rounded-md border border-neutral-500 bg-neutral-700/50 p-8 text-center shadow" data-aos="fade-up">
                             <div
                                 className="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border"
                                 style={{
-                                    backgroundImage: "linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%)",
-                                    borderColor: "rgb(93, 79, 240)",
+                                    backgroundImage: "linear-gradient(rgb(34, 197, 94) 0%, rgb(22, 163, 74) 100%)",
+                                    borderColor: " rgb(22, 163, 74)",
                                 }}
                             >
                                 {card.icon}
